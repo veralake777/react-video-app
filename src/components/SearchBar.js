@@ -1,5 +1,4 @@
 import React from 'react';
-
 class SearchBar extends React.Component {
     state ={ term: '' }
 
@@ -12,6 +11,7 @@ class SearchBar extends React.Component {
 
         // TODO: Make sure we call
         // callback from parent component
+        this.props.onFormSubmit(this.state.term);
     }
 
     render() {
@@ -33,3 +33,4 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+
